@@ -47,11 +47,10 @@ function fetchHashtags() {
       getHashtags(news[i], function(error, newsItemWithHashtags){
         if (error) console.log(error.red);
 
-        Post.find({ "url": newsItemWithHashtags.url }, function(err, posts) {
+        Post.findOne({ "url": newsItemWithHashtags.url }, function(err, post) {
           if (err) console.log(err.red);
 
-          console.log(post._id);
-          if (posts.length > 0) {
+          if (post) {
             Post.findByIdAndUpdate(post._id, {new: true}, function(err, updatedPost){
               if (error) return console.log(error.message.red);
 
