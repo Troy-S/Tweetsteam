@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Steam Hashtags</title>
+</head>
+<body>
+  <h1>HELLO</h1>
+  <ul>
+    <% for (var i = 0; i < posts.length; i++) { %>
+    <%= posts[i].url %>
+    <li><a href="<%= posts[i].url %>"><%= posts[i].hashtag %></a></li>
+    <% } %>
+  </ul>
+</body>
+</html>
