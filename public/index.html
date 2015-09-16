@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="Tweetsteam">
+<head>
+  <title>Tweetsteam</title>
+  <!-- External JS -->
+  <script src="./bower_components/angular/angular.min.js"></script>
+  <script src="./bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="./bower_components/angular-jwt/dist/angular-jwt.min.js"></script>
+  <script src="./bower_components/angular-resource/angular-resource.min.js"></script>
+  
+  <!-- Internal JS -->
+  <script src="./js/app.js"></script>
+  <script src="./js/models/user.js"></script>
+  <script src="./js/controllers/usersController.js"></script>
+  <!-- <script src="./js/services/currentUser.js"></script> -->
+  
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+<body ng-controller="usersController as users">
+  <header>
+    <h1> TweetSteam </h1>
+    <h3> Simplifying news...</h3>
+    <nav>
+      <ul ng-show"!users.currentUser">
+        <li><a ui-sref="join">Join up</a></li>
+        <li><a ui-sref="authorize">Authorize</a></li>
+      </ul>
+    </nav>
+  </header>
+</body>
+</html>
