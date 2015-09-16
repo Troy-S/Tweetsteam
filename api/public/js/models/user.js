@@ -10,10 +10,10 @@ function User($resource) {
     url+'/user/:id',
     { id: '@id'},
     { 'get'      : { method: 'GET'},
-    'save'     : { method: 'POST'},
-    'query'    : { method: 'GET'},
-    'remove'   : { method: 'DELETE'},
-    'delete'   : { method: 'DELETE'},
+      'save'     : { method: 'POST'},
+      'query'    : { method: 'GET'},
+      'remove'   : { method: 'DELETE'},
+      'delete'   : { method: 'DELETE'},
     'authorize': {
       url: url+ '/authorize',
       method: 'POST'
