@@ -59,6 +59,7 @@ function fetchHashtags() {
             });
           } else {
             var newPost      = new Post();
+            newPost.url      = newsItemWithHashtags.url;
             newPost.title    = newsItemWithHashtags.title;
             newPost.author   = newsItemWithHashtags.author;
             newPost.contents = newsItemWithHashtags.contents;

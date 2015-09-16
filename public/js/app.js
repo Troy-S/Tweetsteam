@@ -12,14 +12,18 @@ angular
 // Route with ui
 function MainRouter($stateProvider, $urlRouterProvider){
   $stateProvider
-  .state('join', {
-    url:'/join',
-    templateUrl:'./public/js/views/join.html'
-  })
-  .state('authorize', {
-    url:'/authorize',
-    templateUrl: './public/js/views/authorize.html'
-  });
+    .state('feed', {
+      url:'/feed',
+      templateUrl:'js/views/feed.html'
+    })
+    .state('register', {
+      url:'/register',
+      templateUrl:'js/views/register.html'
+    })
+    .state('login', {
+      url:'/login',
+      templateUrl: 'js/views/login.html'
+    });
 
   $urlRouterProvider.otherwise('/');
 }

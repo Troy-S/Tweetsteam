@@ -6,6 +6,8 @@ var methodOverride  = require('method-override');
 var authController  = require('../controllers/authController');
 var usersController = require('../controllers/usersController');
 
+var Post            = require('../models/post');
+
 router.post('/authorize', authController.login);
 router.post('/join', authController.joinup);
 
@@ -18,4 +20,12 @@ router.route('/users/:id')
   .put(usersController.updateUser)
   .delete(usersController.deleteUser)
 
+router.route('/posts')
+  .get(function(req, res) {
+    Post.find({}, function(err, posts){
+      if (err) return res.status(500).send({message: err });
+      res.status(200).send(posts);
+    });
+  })
+  
 module.exports = router;

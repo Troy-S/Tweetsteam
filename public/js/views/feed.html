@@ -1,0 +1,12 @@
+<section ng-controller="postsController as feed">
+  <h2>Latest</h2>
+  <div class="row">
+    <div class="col-sm-4" ng-repeat="post in feed.posts">
+      <div class="card card-block">
+        <h3 class="card-title"><a href="{{ post.url }}" target="_blank">{{ post.title }}</a></h3>
+        <!--<p class="card-text">{{ post.contents }} With supporting text below as a natural lead-in to additional content.</p>-->
+        <span class="label label-primary" ng-repeat="hashtag in post.hashtags">{{ hashtag.tag }}</span>
+      </div>
+    </div>
+  </div>
+</section>
