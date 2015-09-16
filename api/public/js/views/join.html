@@ -1,0 +1,12 @@
+<form id="join" ng-submit="users.join()" ng-hide="users.currentUser">
+  <label for="email">Email</label>
+  <input type="text" name="email" placeholder="email@prefix" ng-model="users.user.email">
+
+  <label for="full_name">Full name</label>
+  <input type="text" name="email" placeholder="Enter name..." ng-model="users.user.full_name">
+
+  <label for="password">Password</label>
+  <input type="password" name="password" placeholder="Password" ng-model="users.user.password">
+
+  <input type="submit" value="Access">
+</form>
